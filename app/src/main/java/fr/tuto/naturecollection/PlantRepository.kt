@@ -47,6 +47,13 @@ class PlantRepository {
             }
 
         })
+
+    }
+
+    //mise à jour de l'objet plante en BDD
+    fun updatePlant(plant :PlantModel ){
+        databaseRef.child(plant.id).setValue(plant)
+
     }
 
 }

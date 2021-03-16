@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import fr.tuto.naturecollection.MainActivity
 import fr.tuto.naturecollection.PlantModel
+import fr.tuto.naturecollection.PlantRepository
 import fr.tuto.naturecollection.R
 
 class PlantAdapter(private val context:MainActivity,private val plantList:List<PlantModel>,  private val layoutId: Int): RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
@@ -32,6 +33,10 @@ class PlantAdapter(private val context:MainActivity,private val plantList:List<P
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         //recuperation des informations de la plante
         val currentPlant = plantList[position]
+        // recuperer le repo
+        val repo = PlantRepository()
+
+
         // utilisation de glide pour recuperer l'image à partir du liens
         Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)
 
@@ -44,10 +49,17 @@ class PlantAdapter(private val context:MainActivity,private val plantList:List<P
             holder.starIcon.setImageResource(R.drawable.ic_unstar)
         }
 
+        //ajout interaction avec l'etoile
+        holder.starIcon.setOnClickListener{
+            // inverser si le btn est like ou non
+            currentPlant.liked =!currentPlant.liked
+            // mettre à jour l'objet plante
+            repo.updatePlant(currentPlant)
+
+        }
+
     }
 
     override fun getItemCount(): Int = plantList.size
-
-
 
 }
