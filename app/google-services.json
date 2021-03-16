@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "941387240014",
+    "project_id": "natural-collection",
+    "storage_bucket": "natural-collection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941387240014:android:c94e14af545aff9ac3e91f",
+        "android_client_info": {
+          "package_name": "fr.tuto.naturecollection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941387240014-lhidrlgba649tiica4ciafrmfbming2j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fr.tuto.naturecollection",
+            "certificate_hash": "8e82f271931298aa70b383955a70445f69fe2374"
+          }
+        },
+        {
+          "client_id": "941387240014-3kqt8b7ik440u3414ru631ft60785cfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHS3xfv8IokAAPgV-g9DISaJ2ccmw0g0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941387240014-3kqt8b7ik440u3414ru631ft60785cfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
