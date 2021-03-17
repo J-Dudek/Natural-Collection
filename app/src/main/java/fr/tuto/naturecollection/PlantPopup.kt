@@ -32,6 +32,11 @@ class PlantPopup(private val adapter : PlantAdapter, private val currentPlant : 
         //actualiser la description
         findViewById<TextView>(R.id.popup_plant_description_subtitle).text = currentPlant.description
 
+        //actualiser la croissance
+        findViewById<TextView>(R.id.popup_plant_grow_subtitle).text=currentPlant.grow
+        //actualiser la consommation d'eau
+        findViewById<TextView>(R.id.popup_plant_water_subtitle).text=currentPlant.water
+
 
 
     }
