@@ -8,12 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import fr.tuto.naturecollection.MainActivity
-import fr.tuto.naturecollection.PlantModel
-import fr.tuto.naturecollection.PlantRepository
-import fr.tuto.naturecollection.R
+import fr.tuto.naturecollection.*
 
-class PlantAdapter(private val context:MainActivity,private val plantList:List<PlantModel>,  private val layoutId: Int): RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
+class PlantAdapter(val context:MainActivity, private val plantList:List<PlantModel>, private val layoutId: Int): RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
 
 
     // pour ranger tt les composants à controller
@@ -56,6 +53,11 @@ class PlantAdapter(private val context:MainActivity,private val plantList:List<P
             // mettre à jour l'objet plante
             repo.updatePlant(currentPlant)
 
+        }
+        // lors du clic sur une plante
+        holder.itemView.setOnClickListener{
+            //Afficher la popup
+            PlantPopup(this, currentPlant).show()
         }
 
     }
