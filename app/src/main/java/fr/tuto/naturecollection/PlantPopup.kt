@@ -18,6 +18,47 @@ class PlantPopup(private val adapter : PlantAdapter, private val currentPlant : 
         // on injecte le layout
         setContentView(R.layout.popup_plants_details)
         setupComponents()
+        setupCloseButton()
+        setupDeleteButton()
+        setupStarButton()
+    }
+
+    private fun setupStarButton() {
+        // recuperation
+        val starButton = findViewById<ImageView>(R.id.star_button)
+        updateStar(starButton)
+        //interaction
+        starButton.setOnClickListener {
+            currentPlant.liked = !currentPlant.liked
+            val repo = PlantRepository()
+            repo.updatePlant(currentPlant)
+            updateStar(starButton)
+        }
+    }
+
+    private fun updateStar(button: ImageView){
+        if(currentPlant.liked){
+            button.setImageResource(R.drawable.ic_star)
+        }else{
+            button.setImageResource(R.drawable.ic_unstar)
+        }
+
+    }
+
+    private fun setupDeleteButton() {
+        findViewById<ImageView>(R.id.delete_button).setOnClickListener{
+            //supprimer la plante de la BDD
+            val repo = PlantRepository()
+            repo.deletePlant(currentPlant)
+            dismiss()
+        }
+    }
+
+    private fun setupCloseButton() {
+        findViewById<ImageView>(R.id.close_button).setOnClickListener{
+            //fermer la fenetre
+            dismiss()
+        }
     }
 
     private fun setupComponents() {
