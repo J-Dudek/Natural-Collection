@@ -35,10 +35,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        loadFragment(HomeFragment(this))
-
-        // Injecter le fragment home dans fragment_container
-
     }
 
     private fun loadFragment(fragment: Fragment, string:Int) {
