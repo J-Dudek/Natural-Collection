@@ -31,4 +31,10 @@
     <style name="TitleTextStyle" parent="SubtitleTextStyle" >
         <item name="android:textSize">24sp</item>
     </style>
+    <!-- Créer style pour la bottom navigation view-->
+    <style name="BottomNavigationTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/kanit</item>
+    </style>
+    <!-- Style de personnalosation de la barre-->
 </resources>
