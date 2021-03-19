@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import fr.tuto.naturecollection.MainActivity
-import fr.tuto.naturecollection.PlantModel
 import fr.tuto.naturecollection.PlantRepository.Singleton.plantList
 import fr.tuto.naturecollection.R
 import fr.tuto.naturecollection.adapter.PlantAdapter

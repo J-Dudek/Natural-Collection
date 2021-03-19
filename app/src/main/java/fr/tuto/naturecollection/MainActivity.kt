@@ -1,8 +1,8 @@
 package fr.tuto.naturecollection
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import fr.tuto.naturecollection.fragments.AddPlantFragment

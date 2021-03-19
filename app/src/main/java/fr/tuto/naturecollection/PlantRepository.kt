@@ -15,9 +15,7 @@ import fr.tuto.naturecollection.PlantRepository.Singleton.databaseRef
 import fr.tuto.naturecollection.PlantRepository.Singleton.downloadUri
 import fr.tuto.naturecollection.PlantRepository.Singleton.plantList
 import fr.tuto.naturecollection.PlantRepository.Singleton.storageReference
-import java.net.URI
 import java.util.*
-import javax.security.auth.callback.Callback
 
 class PlantRepository {
 
